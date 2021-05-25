@@ -3,7 +3,7 @@
 
 const oneData ={
     get:async(req:Request,res:Response)=>{
-        
+        try{
         const device : string = req.params.device;
 
         await wind.find({
@@ -18,9 +18,15 @@ const oneData ={
         
         })
         .catch((error:any)=>{
-            console.error(error);
-            res.status(500).send("some error");
+           throw error;
+           
         });
+    }
+    catch(error:any)
+    {
+        console.error(error);
+        res.status(500).send("some error");
+    }
    
     }
 }

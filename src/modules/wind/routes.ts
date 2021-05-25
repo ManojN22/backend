@@ -9,6 +9,6 @@ const BASE_ROUTE: string =""
 //generics route goes here
 windRouter.get(BASE_ROUTE+"/:device", oneData.get);
 
-windRouter.get(BASE_ROUTE+"/particle", particleData.get);
+windRouter.post(BASE_ROUTE+"/particle", particleData.post);
 
 export {windRouter}

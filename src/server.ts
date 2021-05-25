@@ -1,8 +1,13 @@
-import express ,{Application, Request, Response, NextFunction} from 'express';
+import express ,{Application, Request, Response, NextFunction, json} from 'express';
 
 import {mongooseConnection} from './mongoConfig'
 
 import cors from 'cors';
+
+
+
+
+
 
 // ROUTERS
 
@@ -11,6 +16,9 @@ import {windRouter} from "./modules/wind/routes"
 const app : Application = express();
 
 mongooseConnection();
+
+app.use(json());
+
 
 app.use(cors());
 

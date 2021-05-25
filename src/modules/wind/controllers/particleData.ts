@@ -2,9 +2,9 @@ import { wind } from "../models/rawData"
 import { Request, Response } from 'express';
 
 const particleData = {
-    get: async (req: Request, res: Response) => {
-
-        const device: string = req.body.device;
+    post: async (req: Request, res: Response) => {
+try{
+        const device = req.body.device;
 
         await wind.aggregate([{
             $match: {
@@ -44,10 +44,16 @@ const particleData = {
 
             })
             .catch((error: any) => {
-                console.error(error);
-                res.status(500).send("some error");
+                throw error;
+                
+                
             });
-
+        }
+        catch(error:any)
+        {
+            console.error(error);
+            res.status(500).send("some error");
+        }
     }
 }
 
