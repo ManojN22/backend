@@ -1,4 +1,4 @@
-import express ,{Application, Request, Response, NextFunction, json} from 'express';
+import express ,{Application, Request, Response, NextFunction, json,urlencoded} from 'express';
 
 import {mongooseConnection} from './mongoConfig'
 
@@ -19,6 +19,7 @@ mongooseConnection();
 
 app.use(json());
 
+app.use(urlencoded({ extended: true }));
 
 app.use(cors());
 

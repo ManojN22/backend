@@ -24,7 +24,7 @@ const oneData ={
     }
     catch(error:any)
     {
-        console.error(error);
+        console.error(error);// handling error
         res.status(500).send("some error");
     }
    
