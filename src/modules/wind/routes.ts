@@ -23,7 +23,7 @@ windRouter.post(BASE_ROUTE+"/time", timeFilter.post);
 
 // windRouter.post(BASE_ROUTE+"/csv-input", csvToData.post);
 
-windRouter.post('/handleFile',upload.single('uploadCsv'),csvToData.post);
+windRouter.post('/csv-upload',upload.single('uploadCsv'),csvToData.post);
 
 
 export {windRouter}

@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "8fc068a4-caf5-4d26-ba81-36128eefc043",
+		"name": "PRAAN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "time filter",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6Im1hbm9qIiwiZW1haWwiOiJtYW5vamt1bWFyQGdtYWlsLmNvbSJ9LCJpYXQiOjE2MjIwMjg2ODh9.G_9wA7Ax5JYvgzhjgx6SrDKJWjTHV5-T0ANq9OXcskU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"from\":\"2021-05-20T00:00:00.000Z\",\r\n\t\"to\":\"2021-05-26T00:00:00.000Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/time",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"time"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "one data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6Im1hbm9qIiwiZW1haWwiOiJtYW5vamt1bWFyQGdtYWlsLmNvbSJ9LCJpYXQiOjE2MjIwMjg2ODh9.G_9wA7Ax5JYvgzhjgx6SrDKJWjTHV5-T0ANq9OXcskU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/DeviceA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"DeviceA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "particle data grouped",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6Im1hbm9qIiwiZW1haWwiOiJtYW5vamt1bWFyQGdtYWlsLmNvbSJ9LCJpYXQiOjE2MjIwMjg2ODh9.G_9wA7Ax5JYvgzhjgx6SrDKJWjTHV5-T0ANq9OXcskU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"device\":[\"DeviceA\",\"DeviceB\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/particle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"particle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "csv to data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6Im1hbm9qIiwiZW1haWwiOiJtYW5vamt1bWFyQGdtYWlsLmNvbSJ9LCJpYXQiOjE2MjIwMjg2ODh9.G_9wA7Ax5JYvgzhjgx6SrDKJWjTHV5-T0ANq9OXcskU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uploadCsv",
+							"type": "file",
+							"src": "/C:/Users/NANDA KUMAR/Desktop/test_dataset_all.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/csv-upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"csv-upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"manoj\",\r\n    \"email\":\"manojkumar@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

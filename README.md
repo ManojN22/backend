@@ -23,6 +23,8 @@
 ## Information about folder structure
 
 * all controllers are inside the wind and user which is inside modules.
+* collection and database in mongoDB will be create when the csv is upload in `csv-upload` route with key `uploadCsv`.
+* while uploading the key is need to be `uploadCsv` for the file
 
 ## starting server 
 
@@ -33,3 +35,7 @@
 `npm run build`
  
 `npm start`
+
+## foot note 
+#### Thank you for giving me this opportunity
+#### I have not mention the organisation name so that this will not appear on google search.
