@@ -11,7 +11,7 @@
 
 * mongoDB running at port 27017 
 * no program should be running in port 8080 
-* NodeJS need to installed 
+* NodeJS need to be installed 
 
 ## To do 
 
